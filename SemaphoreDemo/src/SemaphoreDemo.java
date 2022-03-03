@@ -1,6 +1,7 @@
+import java.util.concurrent.*;
+
 // java program to demonstrate 
 // use of semaphores Locks 
-import /* ?? */; 
 
 
 // Driver class 
@@ -10,9 +11,9 @@ public class SemaphoreDemo
 	{ 
 		// creating a Semaphore object 
 		// A 1 means that you are allowed 1 write to start with
-		Semaphore semPro = ;
+		Semaphore semPro = new Semaphore(1);
 		// A 0 means that you are not allowed to read (as nobody has yet written to the buffer)
-		Semaphore semCon = ;
+		Semaphore semCon = new Semaphore(0);
 		
 		// creating two threads with name A and B 
 		// Note that thread A will increment the count 
@@ -21,8 +22,8 @@ public class SemaphoreDemo
 		MyThread mt2 = new MyThread(semPro, semCon, "Consumer"); 
 		
 		// stating threads A and B 
-		mt1/* ?? */(); 
-		mt2/* ?? */(); 
+		mt1.start(); 
+		mt2.start();
 		
 		// waiting for threads A and B 
 		mt1.join(); 
