@@ -1,3 +1,10 @@
+/*
+ *  Run this code.
+ *  1: What happens ?
+ *  2: Why does it happen ?
+ *  
+ *  Code courtesy of www.csc.villanova.edu/~mdamian/threads/javamonitors.html
+ */
 public class PC {
 
 	public static void main(String[] args) {
